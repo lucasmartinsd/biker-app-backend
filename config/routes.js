@@ -2,11 +2,7 @@ module.exports = app => {
    
     app.post('/users/signup', app.api.user.save)
     app.post('/users/signin', app.api.auth.signin)
-    // app.get('/users', (req, res) => {
-    //     res.json(req.body.cpf)
-    // });
+    app.post('/users/checkuser', app.api.check.checkuser)
+    app.post('/users/changepass', app.api.changepassword.changepass)
 
-    // app.post('/users', (req, res) => {
-    //     res.status(200).send('user=' + req.body.cpf)
-    // });
 }
