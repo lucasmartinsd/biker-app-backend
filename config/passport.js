@@ -11,7 +11,7 @@ module.exports = app => {
 
     const strategy = new Strategy(params, (payload, done) => {
         
-        app.db('users')
+        app.db('users2')
             .where({ cpf: payload.cpf })
             .first()
             .then( user => {

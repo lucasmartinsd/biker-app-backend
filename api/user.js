@@ -12,7 +12,7 @@ module.exports = app => {
         obterHash(req.body.password, hash => {
             const password = hash
 
-            app.db('users')
+            app.db('users2')
                 .insert({  
                     cpf: req.body.cpf, 
                     name: req.body.name,

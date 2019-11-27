@@ -16,7 +16,7 @@ module.exports = app => {
         obterHash(req.body.password, hash => {
             const password = hash
 
-            app.db('users')
+            app.db('users2')
                 .where({ cpf: req.body.cpf })
                 .update({ password })
                 .then(_ => res.status(204).send())
